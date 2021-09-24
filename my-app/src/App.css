@@ -5,14 +5,16 @@ body{
   font-family: 'nanumsquare';
 }
 .black-nav{
-  background:wheat;
+  background:rgb(253, 253, 253);
   width:100%;
-  display:flex;
-  color:white; 
+  display:inside;
+  color:rgb(155, 218, 255); 
   padding: 20px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   box-sizing: border-box;
+  text-align: center;
+  
 }
 .postList{
   margin-top:30px;

@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css'
+import './App.css';
  
-function MainTile(){
+function MainTitle(){
     return(
       <div className="black-nav">
-        <div> 개발 BLOG </div>
+        <div>portfolio.</div>
       </div>
     );
 }
 
-export default MainTile;
+export default MainTitle;
