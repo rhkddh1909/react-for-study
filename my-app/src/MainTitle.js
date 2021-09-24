@@ -5,7 +5,9 @@ function MainTitle(){
     return(
       <div className="black-nav">
         <div>portfolio.</div>
+        <hr/>
       </div>
+      
     );
 }
 

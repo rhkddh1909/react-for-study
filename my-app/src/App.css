@@ -1,22 +1,53 @@
 .App {
   text-align: center;
+  background:rgb(248, 248, 248)
 }
 body{
   font-family: 'nanumsquare';
 }
 .black-nav{
-  background:rgb(253, 253, 253);
+  background:rgb(255, 255, 255);
   width:100%;
   display:inside;
   color:rgb(155, 218, 255); 
-  padding: 20px;
-  font-weight: 600;
+  padding-top: 10px;
+  font-weight: 800;
   font-size: 30px;
   box-sizing: border-box;
   text-align: center;
-  
+  font-family: "hyemin_bold";
 }
-.postList{
+.menuList{
+  display: inline-flex;
+  padding: 3px;
+  border-style: hidden;
+  border-color: rgb(255, 255, 255);
+}
+
+.menus{
+  width:auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background:rgb(201, 233, 250);
+  border-style: hidden;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 800;
+  margin-left: 20px;
+  margin-right: 20px;
+  scroll-margin: initial;
+  flex-direction: column;
+}
+.contentList{
+  display: inline-flex;
+  padding: 3px;
+  border-style: hidden;
+  border-color: rgb(255, 255, 255);
+}
+.contens{
   margin-top:30px;
   text-align: left;
   padding-left: 20px;
@@ -30,11 +61,6 @@ body{
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-.modal{
-  margin-top:20px;
-  padding:20px;
-  background : navy;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -65,4 +91,14 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: "hyemin_bold";
+  src: url("./fonts/IM_Hyemin-Bold.ttf");
+}
+
+@font-face {
+  font-family: "hyemin";
+  src: url("./fonts/IM_Hyemin-Regular.ttf");
 }

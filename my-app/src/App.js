@@ -2,6 +2,8 @@
 import React, {useState} from 'react';
 import './App.css';
 import './MainTitle';
+import './ContentsList';
+import ContentsList from './ContentsList';
 import MainTitle from './MainTitle';
 
 function App() { 
@@ -41,7 +43,8 @@ function App() {
     /*여기에 HTML으로 코딩*/
     <div className="App">
       <MainTitle />
-      <div className="postList">
+      <ContentsList />
+      <div className="contens">
         <h3>{sub[0]}</h3>
         <p><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA4MTFfNDMg%2FMDAxNTY1NTA1NDk2MDky.vgaEaoa_LzaADN42a9ZH5CgoCaiZjn1GZxw2eQ0Y2bkg.UXToCgDD3eNsNoQWF7smqxuEZj7-AdlOvQl0QyLv6zMg.JPEG.rupina9511%2F%25C1%25A1%25BD%25C9%25B8%25DE%25B4%25BA.jpg&type=sc960_832"></img></p>
         <a onClick={ ()=>{if(hearts[0] == '♥'){heartsChg(['♡',hearts[1],hearts[2]])}else{heartsChg(['♥',hearts[1],hearts[2]])}}}>{hearts[0]}</a>
@@ -62,18 +65,7 @@ function App() {
         <p className="dateStyle">{toDate()}</p>
         <hr/>
       </div>
-      <Modal/>
     </div>
-  );
-}
-
-function Modal(){
-  return(
-  <div className="modal">
-    <h2>제목</h2>
-    <p>날짜</p>
-    <p>상세내용</p>
-  </div>
   );
 }
 
