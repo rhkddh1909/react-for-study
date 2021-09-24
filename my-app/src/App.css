@@ -29,6 +29,11 @@ body{
   height: 40vmin;
   pointer-events: none;
 }
+.modal{
+  margin-top:20px;
+  padding:20px;
+  background : navy;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
