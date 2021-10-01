@@ -3,31 +3,85 @@
 }
 body{
   font-family: 'nanumsquare';
+  background: #faf8f8;
 }
 .black-nav{
-  background:wheat;
+  background:white;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #eeeeee;
   width:100%;
   display:flex;
-  color:white; 
-  padding: 20px;
+  color:black; 
+  padding: 10px;
   font-weight: 600;
   font-size: 20px;
   box-sizing: border-box;
 }
+.listFormat{
+  float:left;
+  margin-right: 0.5%;
+  margin-left: 10%;
+  width : 50%;
+  background: #faf8f8;
+}
+.sideFormat{
+  margin-right: 10%;
+  margin-left: 0.5%;
+  width : 29%;
+  left:60.5%;
+  background: #faf8f8;
+  position: fixed;
+}
 .postList{
+  background: white;
   margin-top:30px;
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #eeeeee;
+  border-radius: 0.5%;
+}
+.titleBox{
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+}
+.contentImg{
+  float:left;
+  display: flex;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+.contentTitle{
+  margin-top:5px;
+  display: flex;
+  float:left;
+  font-size: 15px;
+  font:bold;
+  height: 50px;
+  width: auto;
+}
+.subTitle{
+  font-size: 10px;
+}
+.mainContents{
+  background : #61dafb;
+  height: 600px;
 }
 .dateStyle{
   text-align: left; 
   color : coral;
   font-size: 15px;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  margin-left : 10px;
+  padding-top : 3px;
+  padding-bottom : 3px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
