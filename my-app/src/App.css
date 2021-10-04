@@ -18,6 +18,9 @@ body{
   font-size: 20px;
   box-sizing: border-box;
 }
+.mainTitle{
+  margin-left:10%;
+}
 .listFormat{
   float:left;
   margin-right: 0.5%;
@@ -32,6 +35,64 @@ body{
   left:60.5%;
   background: #faf8f8;
   position: fixed;
+}
+.sideBox{
+  background: #faf8f8;
+  margin-top:30px;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-radius: 0.5%;
+  border-style: solid;
+  border-color: #eeeeee;
+  border-width: 0.5px;
+  display: inline-block;
+}
+.profileTtile{
+  display: inline-flex;
+  width: 100%;
+  height: 30%;
+}
+.profileImg{
+  float:left;
+  display: inline-flex;
+  border-radius: 100%;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+table{
+  word-break: keep-all;
+  margin-top: 10px;
+  color: gray;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+th{
+  vertical-align: top;
+  width: 100px;
+}
+.profileInfo{
+  font-size: 20px;
+  word-break: break-all;
+  display: flex;
+  float: left;
+  margin-left: 10px;
+}
+.profileContents{
+  margin-top: 10px;
+  margin-left : 10px;
+  color: gray;
+}
+.option{
+  float:right;
+  display: flex;
+  width : 50px;
+  height: 50px;
+  margin-right:10px;
+  background: white;
 }
 .postList{
   background: white;
@@ -68,12 +129,10 @@ body{
   height: 50px;
   width: auto;
 }
-.subTitle{
-  font-size: 10px;
-}
 .mainContents{
-  background : #61dafb;
+  display: block;
   height: 600px;
+  width: 100%;
 }
 .dateStyle{
   text-align: left; 
