@@ -32,6 +32,12 @@ function SideContents(){
                         <th>인스타 :</th><td>9u_a_ang_5</td>
                     </tr>
                     <tr>
+                        <th>깃허브 :</th><td><a href="https://github.com/rhkddh1909">https://github.com/rhkddh1909</a></td>
+                    </tr>
+                    <tr>
+                        <th>이메일 :</th><td>rhkddh1909@gmail.com</td>
+                    </tr>
+                    <tr>
                         <th>카카오톡 :</th><td>rhkddh1909</td>
                     </tr>
                     <tr>
@@ -49,14 +55,4 @@ function SideContents(){
     );
 }
 
-//프로필사진 닉네임
-//프로필사진 이름
-//프로필사진 직업
-//소속 : 
-//사용해본 언어 : 
-//회사프로젝트 : 
-//인스타그램 계정 : 
-//카카오톡아이디 : 
-//전화번호 : 
-//나이 : 
 export default SideContents;

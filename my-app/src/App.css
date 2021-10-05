@@ -3,7 +3,7 @@
 }
 body{
   font-family: 'nanumsquare';
-  background: #faf8f8;
+  background: hsl(0, 17%, 98%);
 }
 .black-nav{
   background:white;
@@ -19,32 +19,46 @@ body{
   box-sizing: border-box;
 }
 .mainTitle{
-  margin-left:10%;
+  margin-left:30%;
+}
+.searchBox{
+  position: relative;
+  left:25%;
+  display: inline-flex;
+}
+.inputBox{
+  text-align: center;
+  color: #eeeeee;
+}
+.gitLink{
+  margin-right: 8%;
+  position: relative;
+  left: 45%;
 }
 .listFormat{
   float:left;
   margin-right: 0.5%;
   margin-left: 10%;
   width : 50%;
-  background: #faf8f8;
+  background: hsl(0, 17%, 98%);
 }
 .sideFormat{
-  margin-right: 10%;
-  margin-left: 0.5%;
+  margin-right: 8%;
+  margin-left: 2.5%;
   width : 29%;
   left:60.5%;
-  background: #faf8f8;
+  background: hsl(0, 17%, 98%);
   position: fixed;
 }
 .sideBox{
-  background: #faf8f8;
+  background: hsl(0, 17%, 98%);
   margin-top:30px;
   text-align: left;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
   border-radius: 0.5%;
-  border-style: solid;
+  border-style: hidden;
   border-color: #eeeeee;
   border-width: 0.5px;
   display: inline-block;
@@ -109,6 +123,8 @@ th{
   display: inline-block;
   height: 50px;
   width: 100%;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 .contentImg{
   float:left;
