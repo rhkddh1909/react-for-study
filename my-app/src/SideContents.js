@@ -1,6 +1,5 @@
 import react from "react";
-import './App.css';
-import logo from './logo.svg';
+import './SideInfo.css';
 
 function SideContents(){
     return(

@@ -1,6 +1,5 @@
 import React from "react";
-import './App.css';
-import logo from './logo.svg';
+import './MainContents.css';
 
 function toDate() {
     let date = new Date().getFullYear() + "년"

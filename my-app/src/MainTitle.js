@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import './App.css';
- 
-function MainTitle(){
-    return(
-      <div className="black-nav">
-        <div>portfolio.</div>
-        <hr/>
-      </div>
-      
-=======
 import React, {useState} from "react";
-import './App.css';
-
+import './MainTitle.css';
 
 function MainTitle(){
     const [phText, phTextChg] = useState("🔍검색");
@@ -32,7 +19,6 @@ function MainTitle(){
                 <input className ="inputBox" type="text" placeholder = {phText} onClick={()=>{setBlank()}} onBlur={()=>{setDefault()}}></input>
             </div>
         </div>
->>>>>>> fec4cf5897a86ba559bfe42a8b482732ff0cd6c9
     );
 }
 

@@ -1,0 +1,55 @@
+.gitLink{
+    margin-right: 8%;
+    position: relative;
+    left: 45%;
+  }
+  .sideBox{
+    background: hsl(0, 17%, 98%);
+    margin-top:30px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 0.5%;
+    border-style: hidden;
+    border-color: #eeeeee;
+    border-width: 0.5px;
+    display: inline-block;
+  }
+  .profileTtile{
+    display: inline-flex;
+    width: 100%;
+    height: 30%;
+  }
+  .profileImg{
+    float:left;
+    display: inline-flex;
+    border-radius: 100%;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background: black;
+  }
+  table{
+    word-break: keep-all;
+    margin-top: 10px;
+    color: gray;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  th{
+    vertical-align: top;
+    width: 100px;
+  }
+  .profileInfo{
+    font-size: 20px;
+    word-break: break-all;
+    display: flex;
+    float: left;
+    margin-left: 10px;
+  }
+  .profileContents{
+    margin-top: 10px;
+    margin-left : 10px;
+    color: gray;
+  }

@@ -1,0 +1,54 @@
+.option{
+    float:right;
+    display: flex;
+    width : 50px;
+    height: 50px;
+    margin-right:10px;
+    background: white;
+  }
+  .postList{
+    background: white;
+    text-align: left;
+    border-color: #eeeeee;
+    border-radius: 0.5%;
+    margin-bottom: 10px;
+  }
+  .titleBox{
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  .contentImg{
+    float:left;
+    display: flex;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    background: black;
+  }
+  .contentTitle{
+    margin-top:5px;
+    display: flex;
+    float:left;
+    font-size: 15px;
+    font:bold;
+    height: 50px;
+    width: auto;
+  }
+  .mainContents{
+    display: block;
+    height: 600px;
+    width: 100%;
+  }
+  .dateStyle{
+    text-align: left; 
+    color : coral;
+    font-size: 15px;
+    margin-left : 10px;
+    padding-top : 3px;
+    padding-bottom : 3px;
+  }
