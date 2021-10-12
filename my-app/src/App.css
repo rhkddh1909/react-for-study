@@ -4,8 +4,10 @@
 }
 body{
   font-family: 'nanumsquare';
+  background: hsl(0, 17%, 98%);
 }
 .black-nav{
+<<<<<<< HEAD
   background:rgb(255, 255, 255);
   width:100%;
   display:inside;
@@ -13,6 +15,18 @@ body{
   padding-top: 10px;
   font-weight: 800;
   font-size: 30px;
+=======
+  background:white;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #eeeeee;
+  width:100%;
+  display:flex;
+  color:black; 
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+>>>>>>> fec4cf5897a86ba559bfe42a8b482732ff0cd6c9
   box-sizing: border-box;
   text-align: center;
   font-family: "hyemin_bold";
@@ -47,20 +61,149 @@ body{
   border-style: hidden;
   border-color: rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 .contens{
+=======
+.mainTitle{
+  margin-left:30%;
+}
+.searchBox{
+  position: relative;
+  left:25%;
+  display: inline-flex;
+}
+.inputBox{
+  text-align: center;
+  color: #eeeeee;
+}
+.gitLink{
+  margin-right: 8%;
+  position: relative;
+  left: 45%;
+}
+.listFormat{
+  float:left;
+  margin-right: 0.5%;
+  margin-left: 10%;
+  width : 50%;
+  background: hsl(0, 17%, 98%);
+}
+.sideFormat{
+  margin-right: 8%;
+  margin-left: 2.5%;
+  width : 29%;
+  left:60.5%;
+  background: hsl(0, 17%, 98%);
+  position: fixed;
+}
+.sideBox{
+  background: hsl(0, 17%, 98%);
   margin-top:30px;
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-radius: 0.5%;
+  border-style: hidden;
+  border-color: #eeeeee;
+  border-width: 0.5px;
+  display: inline-block;
+}
+.profileTtile{
+  display: inline-flex;
+  width: 100%;
+  height: 30%;
+}
+.profileImg{
+  float:left;
+  display: inline-flex;
+  border-radius: 100%;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+table{
+  word-break: keep-all;
+  margin-top: 10px;
+  color: gray;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+th{
+  vertical-align: top;
+  width: 100px;
+}
+.profileInfo{
+  font-size: 20px;
+  word-break: break-all;
+  display: flex;
+  float: left;
+  margin-left: 10px;
+}
+.profileContents{
+  margin-top: 10px;
+  margin-left : 10px;
+  color: gray;
+}
+.option{
+  float:right;
+  display: flex;
+  width : 50px;
+  height: 50px;
+  margin-right:10px;
+  background: white;
+}
+.postList{
+  background: white;
+>>>>>>> fec4cf5897a86ba559bfe42a8b482732ff0cd6c9
+  margin-top:30px;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #eeeeee;
+  border-radius: 0.5%;
+}
+.titleBox{
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.contentImg{
+  float:left;
+  display: flex;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+.contentTitle{
+  margin-top:5px;
+  display: flex;
+  float:left;
+  font-size: 15px;
+  font:bold;
+  height: 50px;
+  width: auto;
+}
+.mainContents{
+  display: block;
+  height: 600px;
+  width: 100%;
 }
 .dateStyle{
   text-align: left; 
   color : coral;
   font-size: 15px;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  margin-left : 10px;
+  padding-top : 3px;
+  padding-bottom : 3px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

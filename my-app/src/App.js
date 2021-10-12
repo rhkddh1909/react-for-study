@@ -1,4 +1,5 @@
 /* eslint-disable */
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import './App.css';
 import './MainTitle';
@@ -39,10 +40,20 @@ function App() {
      return date;
   }
   //deep copy : [array]
+=======
+
+import React, { useState } from 'react';
+import './App.css';
+import MainContents from './MainContents';
+import SideContents from './SideContents';
+import MainTitle from './MainTitle';
+function App() {
+>>>>>>> fec4cf5897a86ba559bfe42a8b482732ff0cd6c9
   return ( // html 작성으로 리턴 가능
     /*여기에 HTML으로 코딩*/
     <div className="App">
       <MainTitle />
+<<<<<<< HEAD
       <ContentsList />
       <div className="contens">
         <h3>{sub[0]}</h3>
@@ -64,6 +75,17 @@ function App() {
         <a onClick={ ()=>{if(hearts[2]=='♥'){heartsChg([hearts[0],hearts[1],'♡'])}else{heartsChg([hearts[0],hearts[1],'♥'])}}}>{hearts[2]}</a>
         <p className="dateStyle">{toDate()}</p>
         <hr/>
+=======
+      <div>  
+        <div className="listFormat">
+          <MainContents />
+          <MainContents />
+          <MainContents />
+        </div>
+        <div className="sideFormat">
+          <SideContents />
+        </div>
+>>>>>>> fec4cf5897a86ba559bfe42a8b482732ff0cd6c9
       </div>
     </div>
   );
