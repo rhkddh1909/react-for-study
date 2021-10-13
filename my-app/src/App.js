@@ -9,6 +9,7 @@ function App() {
   return ( 
     <div className="App">
       <MainTitle />
+      커밋 체크
       <div>  
         <div className="listFormat">
           <MenuList />
