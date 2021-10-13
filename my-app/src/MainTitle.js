@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './MainTitle.css';
+import './css/MainTitle.css';
 
 function MainTitle(){
     const [phText, phTextChg] = useState("🔍검색");

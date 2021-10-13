@@ -1,5 +1,5 @@
 import react from "react";
-import './SideInfo.css';
+import './css/SideInfo.css';
 
 function SideContents(){
     return(
