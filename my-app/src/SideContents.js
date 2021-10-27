@@ -1,7 +1,16 @@
-import react from "react";
+import React, { useState, useEffect } from 'react';
 import './css/SideInfo.css';
+//axios
+import axios from 'axios';
 
 function SideContents(){
+
+    let [test, setTest] = useState('');
+    useEffect(() => {
+        axios.get('/test',{params:{}})
+            .then(res => setTest(res.data))
+            .catch((error) => console.log(error.res.data));
+    },[])
     return(
         <div className="sideBox">
             <div className="profileTtile">
@@ -10,8 +19,8 @@ function SideContents(){
                 </div>
                 <div className="profileInfo">
                     <p>
-                        <span style={{fontSize:"4vmin"}}>9u_a_ang_5<br/></span> 
-                        <span style={{fontSize:"2.5vmin", color:"gray"}}>이광오<br/>프로그래머</span>
+                        <span style={{fontSize:"4vmin"}}>{test.TEST_KEY}<br/></span> 
+                        <span style={{fontSize:"2.5vmin", color:"gray"}}>{test.TEST_BODY}<br/>프로그래머</span>
                     </p>
                 </div>
             </div>

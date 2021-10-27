@@ -4,17 +4,10 @@ import MainContents from './MainContents';
 import SideContents from './SideContents';
 import MainTitle from './MainTitle';
 import MenuList from './MenuList';
-//axios
-import axios from 'axios';
+
 
 function App() {
   //server connection test
-  useEffect(() => {
-    axios.get('/api/test')
-         .then(res => console.log(res))
-         .catch()
-  })
-
   return ( 
     <div className="App">
       <MainTitle />
