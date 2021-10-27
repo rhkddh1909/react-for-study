@@ -1,17 +1,34 @@
 const express = require('express');
 const app = express();
-//const api = require('./main/index');
-const PORT = process.env.PORT || 4000;
-const db = require('./config/db');
+const api = require('./routes/index');
+const port = process.env.PORT || 4000;
+const pool = require('./config/dbPool');
 
-app.get('/', (req, res) => {
-     db.query("SELECT * FROM MY_PORTFOLIO.MY_INFO", (err, data) => {
-         if(!err) res.send({ products : data });
-         else res.send(err);
-     })
-    //res.send('Server Response Success');
+app.use('/api',api);
+
+var query = "SELECT * FROM MY_PORTFOLIO.MY_INFO";
+
+pool.on('acquire',function(connection){
+    console.log('Connection %d acquired', connection.threadId);
+});
+pool.on('release',function(connection){
+    console.log('Connection %d release', connection.threadId);
+});
+pool.on('enqueue',function(connection){
+    console.log('Connection %d enqueue', connection.threadId);
+});
+
+app.listen(port, function(){
+    console.log(`Listening on port : ${port}`);
 })
 
-app.listen(PORT, () => {
-    console.log('Server On : http://localhost:${PORT}/');
-})
+// app.get('/', (req, res) => {
+//     pool.getConnection(function(err,connection){
+//         if (err) throw err;
+//         connection.query(query, (err, data) => {
+//             if(!err) res.send({ products : data });
+//             else res.send(err);
+//        })
+//        connection.release();
+//     })
+// })
