@@ -12,7 +12,24 @@ pool.on('enqueue',function(connection){
     console.log('Connection %d enqueue', connection.threadId);
 });
 
-var query = "SELECT TEST_KEY,TEST_BODY FROM portfolio.test";
+var query = 
+"SELECT USER_NAME"  //유저 이름
+   + ", CO_NAME"    //화사 이름
+   + ", NICK_NAME"  //별명
+   + ", JOB"        //직업
+   + ", ENTRY_DY"   //입사일
+   + ", RESG_DY"    //퇴사일
+   + ", INSTA_ID"   //인스타아이디
+   + ", CONCAT('https://github.com/',GIT_ID) AS GIT_URL" //git url
+   + ", KAKAO_ID"   //카카오아이디
+   + ", EMAIL"      //이메일
+   + ", PHONE_NUM"  //핸드폰번호
+   + ", REG_DY"     //등록일시
+   + ", CHG_DY"     //수정일시
++ " FROM MY_PORTFOLIO.MY_INFO"
+;
+
+console.log(query);
 
 router.get('/', function(req,res){
     pool.getConnection(function(err,connection){

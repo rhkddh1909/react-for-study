@@ -5,10 +5,10 @@ import axios from 'axios';
 
 function SideContents(){
 
-    let [test, setTest] = useState('');
+    let [myInfo, setMyInfot] = useState('');
     useEffect(() => {
-        axios.get('/test',{params:{}})
-            .then(res => setTest(res.data))
+        axios.get('/api/getMyInfo',{params:{}})
+            .then(res => setMyInfot(res.data))
             .catch((error) => console.log(error.res.data));
     },[])
     return(
@@ -19,8 +19,8 @@ function SideContents(){
                 </div>
                 <div className="profileInfo">
                     <p>
-                        <span style={{fontSize:"4vmin"}}>{test.TEST_KEY}<br/></span> 
-                        <span style={{fontSize:"2.5vmin", color:"gray"}}>{test.TEST_BODY}<br/>프로그래머</span>
+                        <span style={{fontSize:"4vmin"}}>{myInfo.NICK_NAME}<br/></span> 
+                        <span style={{fontSize:"2.5vmin", color:"gray"}}>{myInfo.USER_NAME}<br/>{myInfo.JOB}</span>
                     </p>
                 </div>
             </div>
