@@ -18,7 +18,8 @@ function MainContents(){
                     <img className="contentImg" src="/image/me.JPG" />
                 </div>
                 <div className="contentTitle">
-                    <h>글제목<br/><span style={{fontSize:"10px"}}>부가설명</span></h>
+                    <p className="titleText">글제목</p>
+                    <p className="subText">부가설명</p>
                 </div>
                 <a className="option"><img src="image/see_more.png"></img></a>
             </div>

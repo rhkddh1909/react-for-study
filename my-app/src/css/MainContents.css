@@ -14,7 +14,8 @@
     margin-bottom: 10px;
   }
   .titleBox{
-    display: inline-block;
+    display: flex;
+    float: left;
     height: 50px;
     width: 100%;
     margin-top:10px;
@@ -31,13 +32,11 @@
     background: black;
   }
   .contentTitle{
-    margin-top:5px;
-    display: flex;
-    float:left;
+    display: inline-flexbox;
     font-size: 15px;
     font:bold;
     height: 50px;
-    width: auto;
+    width: 100%;
   }
   .mainContents{
     display: block;
@@ -51,4 +50,13 @@
     margin-left : 10px;
     padding-top : 3px;
     padding-bottom : 3px;
+  }
+  .titleText{
+    margin : 0px;
+    margin-top: 10px;
+    font-size : 20px;
+  }
+  .subText{
+    margin : 0px;
+    font-size: 10px;
   }

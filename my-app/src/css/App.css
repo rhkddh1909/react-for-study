@@ -6,13 +6,6 @@ body{
   font-family: 'nanumsquare';
   background: hsl(0, 17%, 98%);
 }
-.listFormat{
-  float:left;
-  margin-right: 0.5%;
-  margin-left: 10%;
-  width : 50%;
-  background: hsl(0, 17%, 98%);
-}
 .sideFormat{
   margin-right: 8%;
   margin-left: 2.5%;
