@@ -1,86 +1,57 @@
 import React, {useState, useEffect} from 'react';
 import './css/Menu.css';
-import MainContents from './MainContents';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import All from './All';
+import Projects from './Projects';
+import Algorithms from './Algorithm';
+import Awards from './Awards';
+
 
 function MenuList(){    
-    alert("호출");
-    return(
-        <div>  
-            <div className="listFormat">
-                <Navigator />
-            </div>
-        </div>
-    );
-}
-
-function Navigator(){
     const [currClick, setCurrClick] = useState("all");
     
     const tabClick = (e) =>{
-        if(e.target.id != null){
-            setCurrClick(e.target.id);
-        }
+        setCurrClick(e.target.id);
     }
 
     useEffect(
         (e) => {
-            alert(currClick);
-            if(currClick != null){
-                let currTab = document.getElementById(currClick);
-                currTab.className="menus on";
+            let list = document.getElementsByClassName("menus");
+            for(var i = 0; i < list.length; i++){
+                if(list[i].id == currClick){
+                    list[i].classList.add("on");
+                }
+                else{
+                    list[i].classList.remove("on");
+                }
             }
         },[currClick]
     );
+     return(
+        <div>  
+            <div className="listFormat">
+                <Navigator tabClick={tabClick} />
+            </div>
+        </div>
+    );
+}
+
+function Navigator(props){
     return(
         <BrowserRouter>
             <div className="menuList">
-                <Link to="/all" id="all" onClick = {tabClick} className="menus">all.</Link>
-                <Link to="/algorithm" id="algorithm" onClick = {tabClick} className="menus">algorithm.</Link>
-                <Link to="/project" id="project" onClick = {tabClick} className="menus">project.</Link>
-                <Link to="/awards" id="awards" onClick = {tabClick} className="menus">awards.</Link>
+                <Link to='/all' id="all" onClick = {props.tabClick} className="menus">all.</Link>
+                <Link to='/algorithm' id="algorithm" onClick = {props.tabClick} className="menus">algorithm.</Link>
+                <Link to='/projects' id="projects" onClick = {props.tabClick} className="menus">project.</Link>
+                <Link to='/awards' id="awards" onClick = {props.tabClick} className="menus">awards.</Link>
             </div>
             <Routes>
-                <Route path="/all" render={All} />
-                <Route path="/algorithm" render={<MainContents />} />
-                <Route path="/projects" render={<MainContents />} />
-                <Route path="/awards" render={<MainContents />} />
+                <Route path='/all' element={<All />} />
+                <Route path='/algorithm' element={<Projects />} />
+                <Route path='/projects' element={<Algorithms />} />
+                <Route path='/awards' element={<Awards />} />
             </Routes>
         </BrowserRouter>
-    );
-}
-function All(){
-    return(
-        <div>
-            <MainContents />
-        </div>
-    );
-}
-function Algorithms(){
-    return(
-        <div>
-            <MainContents />
-            <MainContents />
-        </div>
-    );
-}
-function Projects(){
-    return(
-        <div>
-            <MainContents />
-            <MainContents />
-            <MainContents />
-        </div>
-    );
-}
-function Awards(){
-    return(
-        <>
-            <MainContents />
-            <MainContents />
-            <MainContents />
-            <MainContents />
-        </>
     );
 }
 

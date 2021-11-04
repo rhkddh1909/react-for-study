@@ -2,17 +2,22 @@
     border-style: hidden;
     border-color: rgb(255, 255, 255);
     display: flex;
-    margin-top:10px;
+    margin-top:0.5px;
+    height: 50px;
   }
   .menus{
+    padding-top: 10px;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
     background:hsl(0, 17%, 98%);
+    font-size: 18px;
     border-radius: 0.5px;
-    text-align: center;
     font-weight: 800;
-    border-width: 1px;
+    border-width: 0.1px;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-color: hsl(0, 17%, 98%);
+    text-decoration: none;
+    color: black;
   }
   .listFormat{
     float:left;
