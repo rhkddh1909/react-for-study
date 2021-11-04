@@ -4,8 +4,8 @@ import SideContents from './SideContents';
 import MainTitle from './MainTitle';
 import MenuList from './MenuList';
 
-
 function App() {
+  alert("랜더링");
   return ( 
     <div className="App">
       <MainTitle />

@@ -8,11 +8,10 @@
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
-    background:rgb(255, 255, 255);
+    background:hsl(0, 17%, 98%);
     border-radius: 0.5px;
     text-align: center;
     font-weight: 800;
-    border-style:outset;
     border-width: 1px;
   }
   .listFormat{
@@ -21,4 +20,7 @@
     margin-left: 10%;
     width : 50%;
     background: hsl(0, 17%, 98%);
+  }
+  .on{
+    background:rgb(255, 255, 255);
   }
