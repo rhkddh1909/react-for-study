@@ -4,14 +4,14 @@
 }
 body{
   font-family: 'nanumsquare';
-  background: hsl(0, 17%, 98%);
+  background: hsl(0, 0%, 96%);
 }
 .sideFormat{
   margin-right: 8%;
   margin-left: 2.5%;
   width : 29%;
   left:60.5%;
-  background: hsl(0, 17%, 98%);
+  background: hsl(0, 0%, 96%);
   position: fixed;
 }
 

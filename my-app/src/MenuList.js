@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setId } from './reducers/currClick';
 import './css/Menu.css';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import All from './All';
@@ -6,47 +8,58 @@ import Projects from './Projects';
 import Algorithms from './Algorithm';
 import Awards from './Awards';
 
-
 function MenuList(){    
-    const [currClick, setCurrClick] = useState("all");
+    const dispatch = useDispatch();
+    const stateValues = useSelector(state => state.stateValues);
     
-    const tabClick = (e) =>{
-        setCurrClick(e.target.id);
-    }
 
-    useEffect(
-        (e) => {
-            let list = document.getElementsByClassName("menus");
-            for(var i = 0; i < list.length; i++){
-                if(list[i].id == currClick){
-                    list[i].classList.add("on");
-                }
-                else{
-                    list[i].classList.remove("on");
-                }
-            }
-        },[currClick]
-    );
-     return(
+    return(
         <div>  
             <div className="listFormat">
-                <Navigator tabClick={tabClick} />
+                <Navigator dispatch = {dispatch} stateValues = {stateValues}/>
             </div>
         </div>
     );
 }
 
 function Navigator(props){
+
+    var location = window.location.pathname.replace(/\//gi,"");
+    console.log("location : "+ location);
+    
+    props.dispatch(setId(location));
+    console.log(props.stateValues.currId);
+    var item = document.getElementById(props.stateValues.currId);
+    console.log(item);
+    if(item !== null){
+        item.classList.add("on");
+    }    
+    
+
+    const tabClick = (e) =>{
+        console.log("click");
+        props.dispatch(setId(e.target.id));
+        console.log(props.stateValues.currId);
+        var items = document.getElementsByClassName("menus");
+        for(var i = 0; i < items.length; i++){
+            if(items[i].id === props.stateValues.currId){
+                items[i].classList.add("on");
+            }
+            else{
+                items[i].classList.remove("on");
+            }
+        }
+    }
     return(
         <BrowserRouter>
             <div className="menuList">
-                <Link to='/all' id="all" onClick = {props.tabClick} className="menus">all.</Link>
-                <Link to='/algorithm' id="algorithm" onClick = {props.tabClick} className="menus">algorithm.</Link>
-                <Link to='/projects' id="projects" onClick = {props.tabClick} className="menus">project.</Link>
-                <Link to='/awards' id="awards" onClick = {props.tabClick} className="menus">awards.</Link>
+                <Link to='/' id="all" onClick = {tabClick} className="menus">all.</Link> 
+                <Link to='/algorithm' id="algorithm" onClick = {tabClick} className="menus">algorithm.</Link>
+                <Link to='/projects' id="projects" onClick = {tabClick} className="menus">project.</Link>
+                <Link to='/awards' id="awards" onClick = {tabClick} className="menus">awards.</Link>
             </div>
             <Routes>
-                <Route path='/all' element={<All />} />
+                <Route path='/' element={<All />} />
                 <Route path='/algorithm' element={<Projects />} />
                 <Route path='/projects' element={<Algorithms />} />
                 <Route path='/awards' element={<Awards />} />
