@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setId } from './reducers/currClick';
 import './css/Menu.css';
@@ -12,7 +12,6 @@ function MenuList(){
     const dispatch = useDispatch();
     const stateValues = useSelector(state => state.stateValues);
     
-
     return(
         <div>  
             <div className="listFormat">
@@ -24,17 +23,9 @@ function MenuList(){
 
 function Navigator(props){
 
-    var location = window.location.pathname.replace(/\//gi,"");
+    const location = window.location.pathname.replace(/\//gi,'');
+
     console.log("location : "+ location);
-    
-    props.dispatch(setId(location));
-    console.log(props.stateValues.currId);
-    var item = document.getElementById(props.stateValues.currId);
-    console.log(item);
-    if(item !== null){
-        item.classList.add("on");
-    }    
-    
 
     const tabClick = (e) =>{
         console.log("click");
@@ -53,10 +44,10 @@ function Navigator(props){
     return(
         <BrowserRouter>
             <div className="menuList">
-                <Link to='/' id="all" onClick = {tabClick} className="menus">all.</Link> 
-                <Link to='/algorithm' id="algorithm" onClick = {tabClick} className="menus">algorithm.</Link>
-                <Link to='/projects' id="projects" onClick = {tabClick} className="menus">project.</Link>
-                <Link to='/awards' id="awards" onClick = {tabClick} className="menus">awards.</Link>
+                <Link to='/' id="all" onClick = {tabClick} className={'menus ' + (location === '' ? 'on': '')} >all.</Link> 
+                <Link to='/algorithm' id="algorithm" onClick = {tabClick} className={'menus ' + (location === 'algorithm' ? 'on': '')} >algorithm.</Link>
+                <Link to='/projects' id="projects" onClick = {tabClick} className={'menus ' + (location === 'projects' ? 'on': '')} >project.</Link>
+                <Link to='/awards' id="awards" onClick = {tabClick} className={'menus ' + (location === 'awards' ? 'on' : '')} >awards.</Link>
             </div>
             <Routes>
                 <Route path='/' element={<All />} />
