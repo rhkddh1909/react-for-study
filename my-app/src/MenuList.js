@@ -1,12 +1,9 @@
-import React ,{useRef} from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setId } from './reducers/currClick';
 import './css/Menu.css';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
-import All from './All';
-import Projects from './Projects';
-import Algorithms from './Algorithm';
-import Awards from './Awards';
+import DivContents from './DivContents';
 
 function MenuList(){    
     const dispatch = useDispatch();
@@ -50,10 +47,10 @@ function Navigator(props){
                 <Link to='/awards' id="awards" onClick = {tabClick} className={'menus ' + (location === 'awards' ? 'on' : '')} >awards.</Link>
             </div>
             <Routes>
-                <Route path='/' element={<All />} />
-                <Route path='/algorithm' element={<Algorithms />} />
-                <Route path='/projects' element={<Projects />} />
-                <Route path='/awards' element={<Awards />} />
+                <Route path='/' element={<DivContents args = "all"/>} />
+                <Route path='/algorithm' element={<DivContents args = "algorithm"/>} />
+                <Route path='/projects' element={<DivContents args = "projects"/>} />
+                <Route path='/awards' element={<DivContents args = "awards"/>} />
             </Routes>
         </BrowserRouter>
     );
