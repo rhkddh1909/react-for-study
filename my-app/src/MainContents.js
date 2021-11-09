@@ -10,7 +10,7 @@ function toDate() {
     return date;
  }
 
-function MainContents(){
+function MainContents({data}){
     return(
         <div className="postList">
             <div className="titleBox">
@@ -18,7 +18,7 @@ function MainContents(){
                     <img className="contentImg" src="/image/me.JPG" />
                 </div>
                 <div className="contentTitle">
-                    <p className="titleText">글제목</p>
+                    <h6 className="titleText">{data.title}</h6>
                     <p className="subText">부가설명</p>
                 </div>
                 <a className="option"><img src="image/see_more.png"></img></a>

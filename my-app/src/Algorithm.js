@@ -2,15 +2,16 @@ import React from 'react';
 import MainContents from './MainContents';
 
 function Algorithms(){
-    const data = [
+    const datas= [
         {
             title : 1
         }
-
     ];
     return(
         <div>
-            <MainContents data={data}/>
+            {
+                datas.map(data => (<MainContents data={data} key={data.title}/>))
+            }
         </div>
     );
 }

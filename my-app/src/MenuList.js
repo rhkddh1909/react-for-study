@@ -51,8 +51,8 @@ function Navigator(props){
             </div>
             <Routes>
                 <Route path='/' element={<All />} />
-                <Route path='/algorithm' element={<Projects />} />
-                <Route path='/projects' element={<Algorithms />} />
+                <Route path='/algorithm' element={<Algorithms />} />
+                <Route path='/projects' element={<Projects />} />
                 <Route path='/awards' element={<Awards />} />
             </Routes>
         </BrowserRouter>

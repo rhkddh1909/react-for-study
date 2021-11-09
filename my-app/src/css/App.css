@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background:rgb(248, 248, 248)
+  background:rgb(248, 248, 248);
+  font-family: "hyemin_bold";
 }
 body{
   font-family: 'nanumsquare';
@@ -14,7 +15,6 @@ body{
   background: hsl(0, 0%, 96%);
   position: fixed;
 }
-
 @font-face {
   font-family: "hyemin_bold";
   src: url("./fonts/IM_Hyemin-Bold.ttf");

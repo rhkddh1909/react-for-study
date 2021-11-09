@@ -2,7 +2,7 @@ import React from 'react';
 import MainContents from './MainContents';
 
 function Projects(){
-    const data = [
+    const datas = [
         {
             title : 1
         }
@@ -14,7 +14,9 @@ function Projects(){
     ];
     return(
         <div>
-            <MainContents data={data}/>
+            {
+                datas.map(data => (<MainContents data={data} key={data.title}/>))
+            }
         </div>
     );
 }
