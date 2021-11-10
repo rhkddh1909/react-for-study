@@ -1,10 +1,9 @@
-import { render } from "@testing-library/react";
-import React, {useRef, useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import './css/MainContents.css';
+import UdModal from "./UdModal";
 
 function MainContents({data}){
     const id = "9u_a_ang_5";
-    const btn = useRef();
     const [btnName, setName] = useState(true);
     
     const toDate = () => {
@@ -51,15 +50,15 @@ function MainContents({data}){
                     <h6 className="titleText">{data.title}</h6>
                     <p className="subText">{toDate()}</p>
                 </div>
-                <a className="option"><img src="image/see_more.png"></img></a>
+                <a className="option" onClick={()=>{alert("더보기");}}><img src="image/see_more.png"></img></a>
             </div>
             <div>
                 <img className="mainContents" src="/image/shadow.jpeg"></img>
             </div> 
             <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnName ? "..보기" : "..접기"}</a></p>
             {detailList(btnName)}
+            <div><UdModal /></div>
         </div>
     );
 }
-
 export default MainContents;

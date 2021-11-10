@@ -1,0 +1,20 @@
+.udModalOverlay{
+    display : block;
+    box-sizing: border-box;
+    background-color:rgba(0, 0, 0, 0.2);/*까만색(0,0,0) 20% 투명도*/;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    z-index: 999;
+    position: fixed;
+}
+.udModalInner{
+    box-sizing: border-box;
+    top : 50%;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    z-index: 999;
+    position: relative;
+}
