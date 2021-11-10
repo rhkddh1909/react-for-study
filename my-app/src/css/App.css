@@ -15,6 +15,9 @@ body{
   background: hsl(0, 0%, 96%);
   position: fixed;
 }
+a{
+  cursor: pointer;
+}
 @font-face {
   font-family: "hyemin_bold";
   src: url("./fonts/IM_Hyemin-Bold.ttf");
