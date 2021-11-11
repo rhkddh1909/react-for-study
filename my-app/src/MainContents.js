@@ -1,14 +1,11 @@
 import React, {useState} from "react";
 import './css/MainContents.css';
 import UdModal from "./UdModal";
-import { useSelector, useDispatch } from 'react-redux';
 import {setMoreBtn} from './reducers/currClick';
 
 function MainContents({data}){
     const id = "9u_a_ang_5";
-    const dispatch = useDispatch();
-    const stateValues = useSelector(state => state.stateValues);
-    const [detailBtn, setDetailBtn] = useState(true);
+    const [btnEvent, setbtnEvent] = useState({detailBtn : true, moreBtn : false});
     const toDate = () => {
         let date = new Date().getFullYear() + "년"
           + (new Date().getMonth()+1) + "월"
@@ -19,15 +16,25 @@ function MainContents({data}){
     }
 
     const CommnetsYn = (e) => {
-        if(detailBtn){
-            setDetailBtn(false);
+        if(btnEvent.detailBtn){
+            setbtnEvent({
+                ...btnEvent,
+                detailBtn : false
+            });
         }
         else{
-            setDetailBtn(true);
+            setbtnEvent({
+                ...btnEvent,
+                detailBtn : true
+            });
         }
     }
     const modalYn = (e) => {
-        dispatch(setMoreBtn(true));
+        document.body.style.overflow = "hidden";
+        setbtnEvent({
+            ...btnEvent,
+            moreBtn:true
+        });
     }
 
     const detailList = (detailBtn) => {
@@ -57,9 +64,9 @@ function MainContents({data}){
             <div>
                 <img className="mainContents" src="/image/shadow.jpeg"></img>
             </div> 
-            <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{detailBtn ? "..보기" : "..접기"}</a></p>
-            {detailList(detailBtn)}
-            <UdModal />
+            <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnEvent.detailBtn ? "..보기" : "..접기"}</a></p>
+            {detailList(btnEvent.detailBtn)}
+            <UdModal visible={btnEvent.moreBtn} setClose={setbtnEvent}/>
         </div>
     );
 }

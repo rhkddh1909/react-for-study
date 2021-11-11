@@ -1,13 +1,9 @@
 import {createPortal} from "react-dom";
 import React from 'react';
 import './css/Modal.css';
-import { useSelector, useDispatch } from 'react-redux';
-import {setMoreBtn} from './reducers/currClick';
 
-function UdModal(){
-    const dispatch = useDispatch();
-    const stateValues = useSelector(state=>state.stateValues);
-
+function UdModal(props){
+    
     const mDown = (e) => {
         e.target.style.background = "hsl(0, 0%, 96%)";
     }
@@ -22,9 +18,10 @@ function UdModal(){
         e.target.style.background = "white";
     }
     const closePop = (e) => {
-
+        document.body.style.overflow = "unset"
+        props.setClose(false);
     }
-    return stateValues.moreBtn ? createPortal(
+    return props.visible ? createPortal(
         <div className="udModalOverlay">
             <div onClick={closePop} className="udModalWrapper">
                 <div className="udModalInner">
