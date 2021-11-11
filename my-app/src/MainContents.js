@@ -1,11 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './css/MainContents.css';
 import UdModal from "./UdModal";
+import { useSelector, useDispatch } from 'react-redux';
+import {setMoreBtn} from './reducers/currClick';
 
 function MainContents({data}){
     const id = "9u_a_ang_5";
-    const [btnName, setName] = useState(true);
-    
+    const dispatch = useDispatch();
+    const stateValues = useSelector(state => state.stateValues);
+    const [detailBtn, setDetailBtn] = useState(true);
     const toDate = () => {
         let date = new Date().getFullYear() + "년"
           + (new Date().getMonth()+1) + "월"
@@ -16,20 +19,19 @@ function MainContents({data}){
     }
 
     const CommnetsYn = (e) => {
-        if(btnName){
-            setName(false);
+        if(detailBtn){
+            setDetailBtn(false);
         }
         else{
-            
-            setName(true);
+            setDetailBtn(true);
         }
     }
-    useEffect(() => {
-        detailList()
-    }, [btnName])
+    const modalYn = (e) => {
+        dispatch(setMoreBtn(true));
+    }
 
-    const detailList = (btnName) => {
-        return(btnName ? null : 
+    const detailList = (detailBtn) => {
+        return(detailBtn ? null : 
             <ul>
                 <li>재미 : ⭐⭐⭐⭐⭐</li>
                 <li>난이도 : 🔥🔥🔥🔥🔥</li>
@@ -50,14 +52,14 @@ function MainContents({data}){
                     <h6 className="titleText">{data.title}</h6>
                     <p className="subText">{toDate()}</p>
                 </div>
-                <a className="option" onClick={()=>{alert("더보기");}}><img src="image/see_more.png"></img></a>
+                <a className="option" onClick={modalYn}><img src="image/see_more.png"></img></a>
             </div>
             <div>
                 <img className="mainContents" src="/image/shadow.jpeg"></img>
             </div> 
-            <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnName ? "..보기" : "..접기"}</a></p>
-            {detailList(btnName)}
-            <div><UdModal /></div>
+            <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{detailBtn ? "..보기" : "..접기"}</a></p>
+            {detailList(detailBtn)}
+            <UdModal />
         </div>
     );
 }
