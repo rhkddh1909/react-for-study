@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const api = require('./routes/getMyInfo'); 
+const getMyInfo = require('./routes/getMyInfo'); 
+const getOgInfo = require('./routes/getOgInfo'); 
 const port = process.env.PORT || 4000;
 
-app.use('/api/getMyInfo',api);
+app.use('/api/getMyInfo',getMyInfo);
+app.use('/api/getOgInfo',getOgInfo);
 
 app.listen(port, function(){
     console.log(`Listening on port : ${port}`);

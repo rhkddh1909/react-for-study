@@ -7,10 +7,12 @@ function DivContents(props){
         case "all":
             datas = [
                 {
-                    title : "all"
+                    title : "all",
+                    url : "https://naver.com/"
                 },
                 {
-                    title : "all2"
+                    title : "all2",
+                    url : "https://google.com/"
                 }
                 
             ]
@@ -18,10 +20,12 @@ function DivContents(props){
         case "algorithm":
             datas = [
                 {
-                    title : "algorithm"
+                    title : "algorithm",
+                    url : "https://naver.com/"
                 },
                 {
-                    title : "algorithm2"
+                    title : "algorithm2",
+                    url : "https://google.com/"
                 }
             ]
 
@@ -29,20 +33,24 @@ function DivContents(props){
         case "projects":
             datas = [
                 {
-                    title : "projects"
+                    title : "projects",
+                    url : "https://naver.com/"
                 },
                 {
-                    title : "projects2"
+                    title : "projects2",
+                    url : "https://google.com/"
                 }
             ]
             break;
         case "awards":
             datas = [
                 {
-                    title : "awards"
+                    title : "awards",
+                    url : "https://naver.com/"
                 },
                 {
-                    title : "awards2"
+                    title : "awards2",
+                    url : "https://google.com/"
                 }
             ]
             break;

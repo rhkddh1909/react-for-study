@@ -1,9 +1,18 @@
 import React, {useState} from "react";
 import './css/MainContents.css';
 import UdModal from "./UdModal";
-import {setMoreBtn} from './reducers/currClick';
+//axios
+import axios from 'axios';
+
 
 function MainContents({data}){
+    let ogVal;
+    axios.get('/api/getOgInfo',{params:{url : data.url}})
+            .then(res => {
+                console.log("result",res); 
+                ogVal=res;
+            })
+            .catch((error) => console.log(error));
     const id = "9u_a_ang_5";
     const [btnEvent, setbtnEvent] = useState({detailBtn : true, moreBtn : false});
     const toDate = () => {
@@ -39,7 +48,7 @@ function MainContents({data}){
 
     const detailList = (detailBtn) => {
         return(detailBtn ? null : 
-            <ul>
+            <ul className="comments">
                 <li>재미 : ⭐⭐⭐⭐⭐</li>
                 <li>난이도 : 🔥🔥🔥🔥🔥</li>
                 <li>설명 : 만드는 중이다.</li>
@@ -62,12 +71,12 @@ function MainContents({data}){
                 <a className="option" onClick={modalYn}><img src="image/see_more.png"></img></a>
             </div>
             <div>
-                <img className="mainContents" src="/image/shadow.jpeg"></img>
+                <img className="mainContents" src={ogVal}></img>
             </div> 
             <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnEvent.detailBtn ? "..보기" : "..접기"}</a></p>
             {detailList(btnEvent.detailBtn)}
             <UdModal visible={btnEvent.moreBtn} setClose={setbtnEvent}/>
         </div>
     );
-}
+} 
 export default MainContents;

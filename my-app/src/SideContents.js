@@ -5,10 +5,10 @@ import axios from 'axios';
 
 function SideContents(){
 
-    let [myInfo, setMyInfot] = useState('');
+    let [myInfo, setMyInfo] = useState('');
     useEffect(() => {
         axios.get('/api/getMyInfo',{params:{}})
-            .then(res => setMyInfot(res.data))
+            .then(res => setMyInfo(res.data))
             .catch((error) => console.log(error.res.data));
     },[])
     return(

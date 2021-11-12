@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const getMyInfoRouter = express.Router();
 const pool = require('./config/dbPool');
 
 pool.on('acquire',function(connection){
@@ -31,7 +31,7 @@ var query =
 
 console.log(query);
 
-router.get('/', function(req,res){
+getMyInfoRouter.get('/', function(req,res){
     pool.getConnection(function(err,connection){
         if (err) throw err;
         connection.query(query, (err, data) => {
@@ -49,4 +49,4 @@ router.get('/', function(req,res){
     })
 })
 
-module.exports = router;
+module.exports = getMyInfoRouter;

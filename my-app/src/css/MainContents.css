@@ -13,6 +13,7 @@
     text-align: left;
     border-color: #eeeeee;
     border-radius: 0.5%;
+    padding-bottom: 15px;
     margin-bottom: 10px;
   }
   .titleBox{
@@ -71,4 +72,7 @@
     margin-left: 20px;
     text-decoration: underline;
     color : darkkhaki;
+  }
+  .comments{
+    margin: 0px;
   }
