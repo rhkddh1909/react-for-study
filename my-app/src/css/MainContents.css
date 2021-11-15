@@ -9,6 +9,8 @@
     cursor : pointer;
   }
   .postList{
+    display: inline-flexbox;
+    overflow: hidden;
     background: white;
     text-align: left;
     border-color: #eeeeee;
@@ -42,9 +44,18 @@
     width: 100%;
   }
   .mainContents{
-    display: block;
-    height: 600px;
-    width: 100%;
+    display:flow-root;
+    max-height: 600px;
+    height: auto;
+  }
+  .txt{
+    padding-left: 15px;
+    padding-right: 15px;
+    word-wrap: break-all;
+  }
+  .urlImg{
+    height: 270px;
+    width: 270px;
   }
   .detailStyle{
     text-align: left; 

@@ -1,20 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './css/MainContents.css';
 import UdModal from "./UdModal";
+import ContentsBox from "./ContentsBox";
 //axios
 import axios from 'axios';
 
-
 function MainContents({data}){
-    let ogVal;
-    axios.get('/api/getOgInfo',{params:{url : data.url}})
-            .then(res => {
-                console.log("result",res); 
-                ogVal=res;
-            })
-            .catch((error) => console.log(error));
-    const id = "9u_a_ang_5";
     const [btnEvent, setbtnEvent] = useState({detailBtn : true, moreBtn : false});
+    const id = "9u_a_ang_5";
     const toDate = () => {
         let date = new Date().getFullYear() + "년"
           + (new Date().getMonth()+1) + "월"
@@ -70,9 +63,7 @@ function MainContents({data}){
                 </div>
                 <a className="option" onClick={modalYn}><img src="image/see_more.png"></img></a>
             </div>
-            <div>
-                <img className="mainContents" src={ogVal}></img>
-            </div> 
+            <ContentsBox list={data}/>
             <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnEvent.detailBtn ? "..보기" : "..접기"}</a></p>
             {detailList(btnEvent.detailBtn)}
             <UdModal visible={btnEvent.moreBtn} setClose={setbtnEvent}/>
