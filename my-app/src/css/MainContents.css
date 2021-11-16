@@ -44,7 +44,7 @@
     width: 100%;
   }
   .mainContents{
-    display:flow-root;
+    display: inline-flex;
     max-height: 600px;
     height: auto;
   }
@@ -53,9 +53,34 @@
     padding-right: 15px;
     word-wrap: break-all;
   }
-  .urlImg{
+  .img{
+    height: 600px;
+    width: 100%;
+  }
+  .ogImg{
     height: 270px;
     width: 270px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color:rgb(199, 199, 199);
+    cursor: pointer;
+  }
+  .ogContents{
+    display: flow-root;
+    padding: 20px;
+    max-width: 410px;
+    width:407px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-left-width: 0px;
+    border-color:rgb(199, 199, 199);
+    cursor: pointer;
+  }
+  .main{
+    height: 80%;
+  }
+  .url{
+    height: 20%;
   }
   .detailStyle{
     text-align: left; 
@@ -67,7 +92,6 @@
   }
   .titleText{
     margin : 0px;
-    margin-top: 10px;
     font-size : 20px;
   }
   .subText{

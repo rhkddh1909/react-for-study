@@ -34,6 +34,12 @@ function DivContents(props){
                     key : 2,
                     title : "algorithm2",
                     url : "https://youtube.com/"
+                },
+                {
+                    type : 2,
+                    key : 3,
+                    title : "projects2",
+                    url : "https://github.com/rhkddh1909/algorithm/blob/main/CPP/-2%EC%A7%84%EC%88%98(2089).cc"
                 }
             ]
 
@@ -51,6 +57,12 @@ function DivContents(props){
                     key : 2,
                     title : "projects2",
                     url : "https://youtube.com/"
+                },
+                {
+                    type : 3,
+                    key : 3,
+                    title : "projects2",
+                    url : "https://github.com/rhkddh1909/algorithm/blob/main/CPP/-2%EC%A7%84%EC%88%98(2089).cc"
                 }
             ]
             break;

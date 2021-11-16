@@ -59,6 +59,7 @@ function MainContents({data}){
                 </div>
                 <div className="contentTitle">
                     <h6 className="titleText">{data.title}</h6>
+                    <p className="subText">{id}</p>
                     <p className="subText">{toDate()}</p>
                 </div>
                 <a className="option" onClick={modalYn}><img src="image/see_more.png"></img></a>
