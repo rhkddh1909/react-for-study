@@ -30,16 +30,9 @@
     height: 100px;
     background: black;
   }
-  table{
-    word-break: break-all;
-    margin-top: 10px;
-    color: gray;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-  th{
-    text-align: center;
-    vertical-align: top;
+  li{
+    list-style: none;
+    margin-bottom: 5px;
   }
   .profileInfo{
     font-size: 20px;

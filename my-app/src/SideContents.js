@@ -26,40 +26,18 @@ function SideContents(){
             </div>
             <div className="profileContents">
                 <p>MY INFO</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>소속 :</th><td>IBK시스템</td>
-                        </tr>
-                        <tr>
-                            <th>경력 :</th><td>2년차</td>
-                        </tr>
-                        <tr>
-                            <th>언어 :</th><td>JAVA, JAVASCRIPT, PYTHON, C++, C, MYSQL</td>
-                        </tr>
-                        <tr>
-                            <th>인스타 :</th><td>9u_a_ang_5</td>
-                        </tr>
-                        <tr>
-                            <th>깃허브 :</th><td><a href="https://github.com/rhkddh1909">https://github.com/rhkddh1909</a></td>
-                        </tr>
-                        <tr>
-                            <th>이메일 :</th><td>rhkddh1909@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th>카카오톡 :</th><td>rhkddh1909</td>
-                        </tr>
-                        <tr>
-                            <th>전화번호 :</th><td>010-9965-0688</td>
-                        </tr>
-                        <tr>
-                            <th>팀프로젝트 :</th><td>HF차세대구축, 미세먼지저감대책APP개발, 기업은행BOX프로젝트</td>
-                        </tr>
-                        <tr>
-                            <th>개인프로젝트 :</th><td>PORTFOLIO BLOG 만들기</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div>
+                    <li>소속 : IBK시스템</li>
+                    <li>경력 : 2년차</li>
+                    <li>언어 : JAVA, JAVASCRIPT, PYpON, C++, C, MYSQL</li>
+                    <li>인스타 : 9u_a_ang_5</li>
+                    <li>깃허브 : <a href="https://gipub.com/rhkddh1909">https://github.com/rhkddh1909</a></li>
+                    <li>이메일 : rhkddh1909@gmail.com</li>
+                    <li>카카오톡 : rhkddh1909</li>
+                    <li>전화번호 : 010-9965-0688</li>
+                    <li>팀프로젝트 : HF차세대구축, 미세먼지저감대책APP개발, 기업은행BOX프로젝트</li>
+                    <li>개인프로젝트 : PORTFOLIO BLOG 만들기</li>
+                </div>
             </div>
         </div>
     );

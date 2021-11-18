@@ -8,13 +8,13 @@ function DivContents(props){
             datas = [
                 {
                     type : 1,
-                    key : 1,
+                    key : "all1",
                     title : "all",
                     url : "https://naver.com/"
                 },
                 {
                     type : 1,
-                    key : 2,
+                    key : "all2",
                     title : "all2",
                     url : "https://youtube.com/"
                 }
@@ -25,13 +25,13 @@ function DivContents(props){
             datas = [
                 {   
                     type : 2,
-                    key : 1,
+                    key : "algorithm1",
                     title : "algorithm",
                     url : "https://naver.com/"
                 },
                 {
                     type : 2,
-                    key : 2,
+                    key : "algorithm2",
                     title : "algorithm2",
                     url : "https://youtube.com/"
                 },
@@ -48,13 +48,13 @@ function DivContents(props){
             datas = [
                 {
                     type : 3,
-                    key : 1,
+                    key : "projects1",
                     title : "projects",
                     url : "https://naver.com/"
                 },
                 {
                     type : 3,
-                    key : 2,
+                    key : "projects2",
                     title : "projects2",
                     url : "https://youtube.com/"
                 },
@@ -70,13 +70,13 @@ function DivContents(props){
             datas = [
                 {
                     type : 4,
-                    key : 1,
+                    key : "awards1",
                     title : "awards",
                     url : "https://naver.com/"
                 },
                 {
                     type : 4,
-                    key : 2,
+                    key : "awards2",
                     title : "awards2",
                     url : "https://youtube.com/"
                 }
