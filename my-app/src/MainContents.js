@@ -67,7 +67,7 @@ function MainContents({data}){
             <ContentsBox list={data}/>
             <p className= "commentsTitle">{id} 's Comments<a onClick={CommnetsYn} className="moreComents">{btnEvent.detailBtn ? "..보기" : "..접기"}</a></p>
             {detailList(btnEvent.detailBtn)}
-            <UdModal visible={btnEvent.moreBtn} setClose={setbtnEvent}/>
+            <UdModal visible={btnEvent} setClose={setbtnEvent}/>
         </div>
     );
 } 

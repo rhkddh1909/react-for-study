@@ -50,13 +50,13 @@ function SideContents(){
                             <th>카카오톡 :</th><td>rhkddh1909</td>
                         </tr>
                         <tr>
-                            <th>전화번호</th><td>010-9965-0688</td>
+                            <th>전화번호 :</th><td>010-9965-0688</td>
                         </tr>
                         <tr>
-                            <th>팀 프로젝트 :</th><td>HF차세대구축, 미세먼지저감대책APP개발, 기업은행BOX프로젝트</td>
+                            <th>팀프로젝트 :</th><td>HF차세대구축, 미세먼지저감대책APP개발, 기업은행BOX프로젝트</td>
                         </tr>
                         <tr>
-                            <th>개인 프로젝트 :</th><td>PORTFOLIO BLOG 만들기</td>
+                            <th>개인프로젝트 :</th><td>PORTFOLIO BLOG 만들기</td>
                         </tr>
                     </tbody>
                 </table>

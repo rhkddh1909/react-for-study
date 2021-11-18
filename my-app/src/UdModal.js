@@ -19,9 +19,14 @@ function UdModal(props){
     }
     const closePop = (e) => {
         document.body.style.overflow = "unset"
-        props.setClose(false);
+        props.setClose(
+            {
+                ...props.visible,
+                moreBtn:false
+            }
+        );
     }
-    return props.visible ? createPortal(
+    return props.visible.moreBtn ? createPortal(
         <div className="udModalOverlay">
             <div onClick={closePop} className="udModalWrapper">
                 <div className="udModalInner">
