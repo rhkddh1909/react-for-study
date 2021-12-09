@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, Suspense} from "react";
 import './css/MainContents.css';
 import UdModal from "./UdModal";
 import ContentsBox from "./ContentsBox";
 //axios
 import axios from 'axios';
+
 
 function MainContents({data}){
     const [btnEvent, setbtnEvent] = useState({detailBtn : true, moreBtn : false});

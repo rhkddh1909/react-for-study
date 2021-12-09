@@ -1,7 +1,8 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState, Suspense} from 'react';
 import './css/MainContents.css';
 //axios
 import axios from 'axios';
+
 
 function moveUrl(url){
     window.location.href=url;
@@ -9,11 +10,11 @@ function moveUrl(url){
 
 function ContentsBoxs({list}){
     const [info, setInfo] = useState({ogInfo:{ogUrl:"", ogTitle:"", ogDescription:"", ogImageUrl:""}, contentslen:5});
-    var btnCheck = false;
+    let btnCheck = false;
     useEffect(()=>{
         axios.get('/api/getOgInfo',{params:{url : list.url}})
             .then(res => {
-                console.log("result",res);
+                 console.log("result",res);
                 console.log("url",res.data.ogImage.url); 
                 setInfo(
                     {   
@@ -55,38 +56,50 @@ function ContentsBoxs({list}){
         );
     }
 
-    switch (list.type) {
-        case 1:
-            return(
-                <div className="mainContents ">
-                    <p className="txt">{hideStr(info.ogInfo.ogDescription,info.contentslen)} {btnCheck ? <a onClick={()=>{moreInfo()}} className="moreComents">더보기</a>:null}</p>
-                </div>
-            );
-        case 2:
-            return(
-                <img className="mainContents img" src={info.ogInfo.ogImageUrl}></img>
-            );
-        case 3:
-            return(
-                <div onClick={()=>{moveUrl(info.ogInfo.ogUrl)}} className="mainContents">
-                    <img className="ogImg" src={info.ogInfo.ogImageUrl} />
-                    <div className="ogContents">
-                        <div className="main"> 
-                            <h1>{hideStr(info.ogInfo.ogTitle,20)}</h1>
-                            <p>{hideStr(info.ogInfo.ogDescription,65)}</p>
-                        </div>
-                        <div className="url">
-                            {info.ogInfo.ogUrl}
-                        </div>    
-                    </div>
-                </div>
-            );
-        default:
-            return(
-                <div className="mainContents txt">
-                    타입 오류
-                </div>
-            );
-    }
+    // switch (list.type) {
+    //     case 1:
+    //         return(
+    //             <div className="mainContents ">
+    //                 <p className="txt">{hideStr(info.ogInfo.ogDescription,info.contentslen)} {btnCheck ? <a onClick={()=>{moreInfo()}} className="moreComents">더보기</a>:null}</p>
+    //             </div>
+    //         );
+    //     case 2:
+    //         return(
+    //             <img className="mainContents img" src={info.ogInfo.ogImageUrl}></img>
+    //         );
+    //     case 3:
+    //         return(
+    //             <div onClick={()=>{moveUrl(info.ogInfo.ogUrl)}} className="mainContents">
+    //                 <img className="ogImg" src={info.ogInfo.ogImageUrl} />
+    //                 <div className="ogContents">
+    //                     <div className="main"> 
+    //                         <h1>{hideStr(info.ogInfo.ogTitle,20)}</h1>
+    //                         <p>{hideStr(info.ogInfo.ogDescription,65)}</p>
+    //                     </div>
+    //                     <div className="url">
+    //                         {info.ogInfo.ogUrl}
+    //                     </div>    
+    //                 </div>
+    //             </div>
+    //         );
+    //     default:
+    //         return(
+    //             <div className="mainContents txt">
+    //                 타입 오류
+    //             </div>
+    //         );
+    // }
+
+    return (
+        <Suspense fallback={<div>loading...</div>}>
+            {Test(info.ogInfo.ogImageUrl)}
+        </Suspense>
+    );
 }
 export default React.memo(ContentsBoxs);
+
+function Test(url){
+    return(
+        <div>{url} </div>
+    );
+}
