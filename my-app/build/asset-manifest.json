@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ebc7632b.chunk.css",
+    "main.js": "/static/js/main.bbbd9a71.chunk.js",
+    "main.js.map": "/static/js/main.bbbd9a71.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.08c46c3c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.08c46c3c.js.map",
+    "static/js/2.35143f85.chunk.js": "/static/js/2.35143f85.chunk.js",
+    "static/js/2.35143f85.chunk.js.map": "/static/js/2.35143f85.chunk.js.map",
+    "static/js/3.66d92d5f.chunk.js": "/static/js/3.66d92d5f.chunk.js",
+    "static/js/3.66d92d5f.chunk.js.map": "/static/js/3.66d92d5f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ebc7632b.chunk.css.map": "/static/css/main.ebc7632b.chunk.css.map",
+    "static/js/2.35143f85.chunk.js.LICENSE.txt": "/static/js/2.35143f85.chunk.js.LICENSE.txt",
+    "static/media/Modal.css": "/static/media/IM_Hyemin-Regular.ddf2baef.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08c46c3c.js",
+    "static/js/2.35143f85.chunk.js",
+    "static/css/main.ebc7632b.chunk.css",
+    "static/js/main.bbbd9a71.chunk.js"
+  ]
+}
