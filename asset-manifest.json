@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/react-for-study/index.html/static/js/main.3f0b4d20.js",
-    "index.html": "/react-for-study/index.html/index.html",
-    "main.3f0b4d20.js.map": "/react-for-study/index.html/static/js/main.3f0b4d20.js.map"
+    "main.js": "/react-for-study/static/js/main.3f0b4d20.js",
+    "index.html": "/react-for-study/index.html",
+    "main.3f0b4d20.js.map": "/react-for-study/static/js/main.3f0b4d20.js.map"
   },
   "entrypoints": [
     "static/js/main.3f0b4d20.js"
