@@ -10,7 +10,7 @@ function App() {
         <Route exact path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
       </Routes>
     </Router>
-  );
+  ); 
      
 }
 
